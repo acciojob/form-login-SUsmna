@@ -1,20 +1,9 @@
 function getFormvalue() {
     //Write your code here
-	const form = document.querySelector('form1');
-    
+	var firstName = document.getElementsByName('fname')[0].value;
+    var lastName = document.getElementsByName('lname')[0].value;
 
-    const firstName = form.elements['fname'].value;
-    const lastName = form.elements['lname'].value;
-
- 
-    const fullName = ${firstName} ${lastName};
-
-   
+    var fullName = firstName + " " + lastName;
     alert(fullName);
-}
 
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    getFormvalue(); 
-});
 }
